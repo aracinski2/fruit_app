@@ -1,0 +1,5 @@
+{
+  name: @fruit.name,
+  category: @fruit.category,
+  color: @fruit.color
+}
