@@ -14,4 +14,13 @@ class Api::FruitsController < ApplicationController
     @fruit.save!
     render 'show.json.jb'
   end
+
+  def update
+    @fruit = Fruit.find_by(id: params[:id])
+    @fruit.name = params[:name]
+    @fruit.category = params[:category]
+    @fruit.color = params[:color]
+    @fruit.save
+    render 'show.json.jb'
+  end
 end
