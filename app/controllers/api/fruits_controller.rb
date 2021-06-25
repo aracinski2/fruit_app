@@ -23,4 +23,10 @@ class Api::FruitsController < ApplicationController
     @fruit.save
     render 'show.json.jb'
   end
+
+  def destroy
+    @fruit = Fruit.find_by(id: params[:id])
+    @fruit.destroy
+    render json: {message: "Fruit has been deleted"}
+  end
 end

@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     get "/fruits/:id" => "fruits#show"
     post "/fruits" => "fruits#create"
     patch "/fruits/:id" => "fruits#update"
+    delete "/fruits/:id" => "fruits#destroy"
   end
 end
